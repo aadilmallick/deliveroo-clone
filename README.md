@@ -32,6 +32,14 @@ if (some_condition) {
 const navigation = useNavigation();
 ```
 
+## Mapview and deployed build error
+
+For some reason, with deployed apk or aab builds, the `MapView` doesn't work. The reason for this is that you need to supply a google maps API key to work with the mapview.
+
+## Handling back buttons
+
+https://stackoverflow.com/questions/62875629/how-to-navigate-to-a-screen-on-back-button-press-in-react-navigation-5-stack-nav
+
 # Things I learned in this project
 
 ## Sanity.io tutorial
