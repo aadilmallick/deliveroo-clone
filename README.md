@@ -1,3 +1,25 @@
+# Project Overview
+
+Technologies used:
+
+- React Native (Expo)
+- Redux Toolkit
+- Sanity.io
+- Nativewind
+- React Native Navigation
+
+## Project quickstart
+
+1. Run quick installation of all necessary dependencies
+
+```bash
+npm install @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+npm install @react-navigation/native-stack nativewind
+npx tailwindcss init
+npm i prop-types @reduxjs/toolkit react-redux axios
+```
+
 # What problems I had, and how I fixed them.
 
 ## Scrollview and flex??
@@ -301,3 +323,17 @@ export default function PreparingOrderScreen() {
 ```
 
 ## React Native Progress
+
+## Redux
+
+### IDs problem
+
+One problem that I often ran into with redux is selecting everything in a certain slice. To fix that, I learned of this new technique where we select only the elements we want, filtering by something like an **id**.
+
+```js
+export const selectBasketItemsWithId = (state, id) => {
+  return state.basket.items.filter((item) => item.id === id);
+};
+```
+
+We then use these helper methods in the `useSelector()` hook.
